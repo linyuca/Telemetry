@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Install pyats') {
             steps {
-                sh 'apt-get install "pyats[full]"'
+                sh 'pip3 install "pyats[full]"'
             }
         }
         stage('Run Job') {
