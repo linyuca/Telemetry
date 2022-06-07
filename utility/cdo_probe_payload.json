@@ -1,0 +1,12 @@
+{
+    "edgeUrl": "https://edge.us.cdo.cisco.com",
+    "apiKey": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXIiOiIwIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwiMThlYzlkZjItZDg0Yi00NmYwLWIzOTgtNzVkYjY5MWVmODY0Iiwid3JpdGUiXSwiYW1yIjoic2FtbCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiaXRkIiwiY2x1c3RlcklkIjoiMyIsImlkIjoiZmI1NDkzNWQtMzNmMC00ODg2LTk3YWMtODRjNWYyYjkxYTQ0Iiwic3ViamVjdFR5cGUiOiJ1c2VyIiwianRpIjoiOGJlMTA1YjktMzAzNi00MjM2LWFmNmEtYjgyNTM3NjA2ZWU0IiwicGFyZW50SWQiOiIxOGVjOWRmMi1kODRiLTQ2ZjAtYjM5OC03NWRiNjkxZWY4NjQiLCJjbGllbnRfaWQiOiJhcGktY2xpZW50In0.vgMaaFvETX1h8mdKsp1PYtEzG7Gmk5HNahsv2ZCEcagp2OkC1XNdI4Ai0HJ7f00Y4Sh7x7CUt4jdA-FwEPx8aIZPH404M8mV-wwYJvqnikmDOYZN9j8ebNEQ0jkSRgFhRh-VWnoqC-0I8HfbzHRY0GdgYUAEChdIH2iaEUm54OyUF6667t7peBCjJnZZMUeD4W9BQD_zwUL9ArR_3cvRrhvIDYX3ntSVvKd4NKhCQa05Gg3OPJwtR2iP2FhE0-PE2VWyT0TjxxSS7ZtN0WoCDqYHmospPDGOWcNmaeOuNjy3nPHwzjXsHKIex8dhz7ZBXo0KFWgj1AC9Xp5V-p6dPA",
+    "customerId": "customer-0001",
+    "subscriptionId": "subscription-0001",
+    "userDataPeriod": "2m",
+    "tags": [
+      "cdobeat",
+      "beat",
+      "defenceorchestrator"
+    ]
+}

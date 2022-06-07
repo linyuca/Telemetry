@@ -1,0 +1,71 @@
+#############################################################################
+# Testbed: elk_tb
+#
+# Description:  for observability automation and testing
+#
+# Owner/Team: tchoang@cisco.com
+#
+# Topology: SAE SOLUTION Observability test bed
+#
+################################################################################
+
+#**************************************
+#* TESTBED BLOCK
+#*
+#*  Optional. Describes common information to this testbed.
+#*
+#*
+testbed:
+    name: lenz_tb
+    custom:
+        #msx-cdo-beat-ip: "172.18.101.92"
+        msx-cdo-beat-ip: "172.18.126.163"
+        msx-cdo-client-user: "cdobeat-client"
+        msx-cdo-client-pass: "Cisco123$"
+        msx-aws-beat-ip: "10.81.85.150"
+        msx-port: "8765"
+        cdo-beat-port: "18090"
+        aws-swagger-ip: "10.99.49.29"
+        aws-beat-port: "3301"
+        msx-aws-client-user: "cdobeat-client"
+        msx-aws-client-pass: "Cisco123$"
+        #elastic-search-ip: "172.18.101.92"
+        elastic-search-ip: "172.18.126.163"
+
+        elastic-search-port: "9200"
+        ELK-VERSION: "6.8.0"
+        HEADER: {"content-type": "application/json"}
+        CDO-TOKEN: "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXIiOiIwIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwiMThlYzlkZjItZDg0Yi00NmYwLWIzOTgtNzVkYjY5MWVmODY0Iiwid3JpdGUiXSwiYW1yIjoic2FtbCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiaXRkIiwiY2x1c3RlcklkIjoiMyIsImlkIjoiZmI1NDkzNWQtMzNmMC00ODg2LTk3YWMtODRjNWYyYjkxYTQ0Iiwic3ViamVjdFR5cGUiOiJ1c2VyIiwianRpIjoiOGJlMTA1YjktMzAzNi00MjM2LWFmNmEtYjgyNTM3NjA2ZWU0IiwicGFyZW50SWQiOiIxOGVjOWRmMi1kODRiLTQ2ZjAtYjM5OC03NWRiNjkxZWY4NjQiLCJjbGllbnRfaWQiOiJhcGktY2xpZW50In0.vgMaaFvETX1h8mdKsp1PYtEzG7Gmk5HNahsv2ZCEcagp2OkC1XNdI4Ai0HJ7f00Y4Sh7x7CUt4jdA-FwEPx8aIZPH404M8mV-wwYJvqnikmDOYZN9j8ebNEQ0jkSRgFhRh-VWnoqC-0I8HfbzHRY0GdgYUAEChdIH2iaEUm54OyUF6667t7peBCjJnZZMUeD4W9BQD_zwUL9ArR_3cvRrhvIDYX3ntSVvKd4NKhCQa05Gg3OPJwtR2iP2FhE0-PE2VWyT0TjxxSS7ZtN0WoCDqYHmospPDGOWcNmaeOuNjy3nPHwzjXsHKIex8dhz7ZBXo0KFWgj1AC9Xp5V-p6dPA"
+        URL-SFCN-DEVICES: "https://edge.us.cdo.cisco.com/aegis/rest/v1/services/targets/devices?limit=50&offset=0&q=((model:false)+AND+(deviceType:SFCN_DNG))+AND+(NOT+deviceType:FMCE)"
+        URL-ASAC-DEVICES: "https://edge.us.cdo.cisco.com/aegis/rest/v1/services/targets/devices?q=((model:false)+AND+(deviceType:ASAC))+AND+(NOT+deviceType:FMCE)"
+        URL-DNG-USERS: "https://edge.us.cdo.cisco.com/api/chronos/mfaevents?q={timestamp}&sort=timestamp%3Adesc&limit={limit}&offset={offset}"
+        URL-RAVPN-USERS:  "https://edge.us.cdo.cisco.com/api/chronos/vpnsessions?limit={limit}&offset={offset}&q={timestamp}&sort=loginTime%3Aasc"
+        elastic-search-aws-ip: "10.81.85.150"
+        elastic-search-aws-port: "9200"
+
+
+
+#**************************************
+#* DEVICES BLOCK
+#*
+#*  Mandatory, describes each device within a testbedSSWORD
+#*
+
+devices:
+    cdo:
+        type: elasticsearch
+        connections:
+            url:
+                ip: 172.18.101.92
+                port: 9200
+                timeout: 30
+
+
+    aws:
+        type: elasticsearch
+        connections:
+            url:
+                ip: 10.81.85.150
+                port: 9200
+                timeout: 30
+

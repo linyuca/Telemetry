@@ -1,0 +1,19 @@
+{
+  "deviceId": "LenzAWSGateway",
+  "ip": "1.1.1.1",
+  "metrics": {
+    "aws": {
+      "controlPlaneId": "746faab2-9fab-4859-9665-caeee8900138",
+      "id": "gatewayId",
+      "operationalStatus": "available",
+      "region": "us-east-2",
+      "resourceId": "tgw-0520d77caa6b6904f",
+      "resourceType": "AWS::EC2::TransitGateway",
+      "tenantId": "25986f4f-ebc1-4183-8713-a15b672a4c6a"
+    }
+  },
+  "serviceId": "string",
+  "tags": [
+    "string"
+  ]
+}
